@@ -7,8 +7,14 @@ pipeline {
       }
     }
     stage("test") {
+      when {
+        expression {
+          BRANCH_NAME =="master"
+          echo "-----------master branch ------------"
+        }
+      }
       steps {
-        echo "test env"
+        echo "test env "
       }
     }
     stage("deploy") {
