@@ -1,4 +1,3 @@
-# new update
 pipeline {
   agent any
   stages {
